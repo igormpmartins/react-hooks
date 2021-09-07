@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Link from 'next/link'
 
 //Uso do hook useState
 
@@ -38,9 +39,15 @@ const Index = () => {
 
     return (
         <div>
-            <h1>Teste</h1>
-            <h1 onClick={incrementa}>Outro contador {contador}</h1>
+            <h1>Use State</h1>
+            <h1 onClick={incrementa}>Contador local - {contador}</h1>
             <Display title='Contador' />
+            <h2>Exemplos</h2>
+            <Link href='/sidefx'>Custom Hook e UseEffect</Link><br />
+            <Link href='/cleanup'>UseEffect e Cleanup</Link><br />
+            <Link href='/cleancount'>Clean Count - useMemo/useCallback/useRef ini</Link><br />
+            <Link href='/ref'>UseRef e jQuery</Link><br />
+            <Link href='/data'>Data - UseSWR/Mutate</Link><br />
         </div>
     )
 }
